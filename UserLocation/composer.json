@@ -1,0 +1,22 @@
+{
+    "name": "location/laravel-pwa",
+    "description": "This package use for find location of user",
+    "type": "library",
+    "require": {
+        "php": ">=5.6",
+        "illuminate/support": ">=5.4"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Location\\LaravelPwa\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Showkat Easin",
+            "email": "68397684+ShowkatEasin@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
