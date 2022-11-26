@@ -17,8 +17,7 @@
                         <h2 class="text-success">Here we can see the User Location</h2>
                     </div>
                   
-                    <div onclick="showMap({{ $data->latitude }},{{ $data->longitude }})" class = "card-body">
-                    
+                    <div class = "card-body">
                         <h4>IP Address : {{ $data->ip }}</h4>
                         <h4>Country Name : {{ $data->countryName }}</h4>
                         <h4>Country Code : {{ $data->countryCode }}</h4>
@@ -31,15 +30,11 @@
                     </div>
                         <div class="card-header">
                             <h2 class="text-success">Google Map</h2>
-                        </div> <br>
-                            <div class="mapouter">
-                            <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                            <a href="https://123movies-to.org">123 movies</a>
-                            <br>
-                            <style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style>
-                            <a href="https://www.embedgooglemap.net">google maps widget html</a>
-                            <style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style>
-                            
+                        </div><br>
+
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14607.663588536767!2d90.4393024!3d23.75037835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1669467118039!5m2!1sen!2sbd" width="600" height="450" style="border:0;" 
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  
                             </div>
                           </div>
                        </div>
@@ -52,25 +47,9 @@
         </div>
     </div>
 
-    {{-- Map function code start --}}
+   
+   
 
-    <script>
-        function showMap(lat,long){
-            var coord = {lat:lat, long:long};
-        
-        new google.maps.Map(
-            document.getElementById("map"),
-            {
-                zoom:10,
-                center : coord
-            }
-        );
-    
-    }
-    showMap(0,0);
-    </script>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
-    async defer></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 </body>
 </html>
